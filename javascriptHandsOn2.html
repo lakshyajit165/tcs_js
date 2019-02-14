@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		function callMe() {
+			var name;
+			var age;
+			var reservedStatus;
+			let Passenger={name:"Arun",age:28,reservedStatus:true};
+			document.write('<div><span id="name">'+Passenger.name+'</span>');
+			document.write('<div><span id="age">'+Passenger.age+'</span>');
+			document.write('<div><span id="reservedStatus">'+Passenger.reservedStatus+'</span>');
+		}
+	</script>
+</head>
+<body>
+	<label><button type="Submit" value="Show" onclick="callMe()">Show</button></label>
+	<div><span id="name"></span></div>
+	<div><span id="age"></span></div>
+	<div><span id="reservedStatus"></span></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var carName= ["Innova", "Dzire", "i20", "i10"];
+		var onRoadPrice= [900000, 700000, 500000, 400000];
+		var yearOfModel= [2016, 2017, 2013, 2016];
+		var CarDetails=["Innova-900000-2016","Dzire-700000-2017","i20-500000-2013","i10-400000-2013"];
+
+		function displayCarDetails() {
+			var x = document.getElementById("SelectCar").selectedIndex;
+			document.getElementById('CarDetail').innerHTML=carName[x]+"-"+onRoadPrice[x]+"-"+yearOfModel[x];
+		}
+	</script>
+</head>
+<body>
+<label>Please Choose a Car to get its Details</label>
+<select id="SelectCar">
+	<option value="Innova" onclick="displayCarDetails()">Innova</option>
+	<option value="Dzire" onclick="displayCarDetails()">Dzire</option>
+	<option value="i20" onclick="displayCarDetails()">i20</option>
+	<option value="i10" onclick="displayCarDetails()">i10</option>
+</select>
+<p id="CarDetail"></p>
+</body>
+</html>

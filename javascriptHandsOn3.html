@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function getAge() {
+		var today= new Date();
+		var year= today.getFullYear();
+		var x=document.getElementById('dob').value;
+        var res=x.substr(0,4);
+		if(res>=year) {
+			a=document.write("Wrong Date!!!");
+			document.getElementById('showresults').innerHTML= a;
+		}
+       else {
+       	document.write('You are '+(year-res)+' year(s) old!!');
+       }
+    }
+	</script>
+</head>
+<body>
+	<form>
+	<h2>Javascript Objects</h2>
+	<label>Enter Your DOB</label>
+	<label><input type="Date" name="dob" id="dob"></label>
+	<button type="Submit" onclick="getAge()">Submit</button>
+	<p id="showresults"></p>
+</form>
+</body>
+</html>

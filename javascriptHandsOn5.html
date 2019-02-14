@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function SumOfSeries() {
+			var var1= 0;
+			var var2= 1;
+			var var3;
+			var s=1;
+			for(var i=0;i<=9;i++)
+			{
+				var3 = var1 + var2;
+				s+= var3
+				var1 = var2;
+				var2 = var3;
+			}
+				document.getElementById('result').innerText= s;
+		}
+	</script>
+</head>
+<body>
+	<input type="button" onclick="SumOfSeries()" id="generate" value="Generate Series">
+	<p><span id="result"></span></p>
+
+</body>
+</html>

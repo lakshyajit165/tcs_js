@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function validate() {
+			var flag=false;
+			if(document.getElementById("uid").value=="")
+			{
+				document.getElementById("msgUid").innerText="Invalid Entry";
+			}
+			else {
+				flag=true;
+				document.getElementById("msgUid").innerText="OK!";
+			}
+			if(document.getElementById("password").value!="" && document.getElementById("confirm").value!="")
+			{
+				if(document.getElementById("confirm").value==document.getElementById("password").value)
+				{
+					flag=true;
+					document.getElementById("msgConfirm").innerText="OK!";
+					document.getElementById("msgPassword").innerText="OK!";
+					document.getElementById("create1").innerText="OK!";
+				}
+				else
+				{
+					document.getElementById("msgUid").innerText="Invalid Entry";
+					document.getElementById("msgConfirm").innerText="Invalid Entry";
+					document.getElementById("msgPassword").innerText="Invalid Entry";
+					document.getElementById("create1").innerText="Invalid Entry";
+				}
+			}
+			if(document.getElementById("confirm").value==document.getElementById("password").value && document.getElementById("uid").value=="")
+			{
+				document.getElementById("msgConfirm").innerText="Invalid Entry";
+				document.getElementById("msgPassword").innerText="Invalid Entry";
+				document.getElementById("create1").innerText="Invalid Entry";
+			}
+		}
+	</script>
+</head>
+<body>
+<form>
+	<label>UserId</label>
+	<input type="text" name="uid" id="uid" required><div id="msgUid"></div><br>
+	<label>Password</label>
+	<input type="Password" name="password" id="password" required><div id="msgPassword"></div><br>
+	<label>ConfirmPassword</label>
+	<input type="Password" name="confirm" id="confirm" required><div id="msgConfirm"></div><br>
+	<input type="button" id="create" value="create" onclick="validate()"><div id="create1"></div><br>
+</form>
+</body>
+</html>
